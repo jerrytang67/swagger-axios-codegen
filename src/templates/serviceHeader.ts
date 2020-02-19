@@ -66,7 +66,7 @@ export function customerServiceHeader(options: ISwaggerOptions) {
     request<T = any>(config: any): IRequestPromise<T>;
   }
 
-  interface IRequestConfig {
+  export interface IRequestConfig {
     method?: any;
     headers?: any;
     url?: any;
@@ -92,7 +92,7 @@ function requestHeader() {
   };
 
   // Instance selector
-  function axios(configs: IRequestConfig, resolve: (p: any) => void, reject: (p: any) => void): Promise<any> {
+  export function axios(configs: IRequestConfig, resolve: (p: any) => void, reject: (p: any) => void): Promise<any> {
     if (serviceOptions.axios) {
       return serviceOptions.axios.request(configs).then(res => {
         resolve(res.data);
@@ -105,7 +105,7 @@ function requestHeader() {
     }
   }
   
-  function getConfigs(method: string, contentType: string, url: string,options: any):IRequestConfig {
+  export function getConfigs(method: string, contentType: string, url: string,options: any):IRequestConfig {
     const configs: IRequestConfig = { ...options, method, url };
     configs.headers = {
       ...options.headers,

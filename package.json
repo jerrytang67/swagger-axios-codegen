@@ -1,12 +1,12 @@
 {
-  "name": "swagger-axios-codegen",
+  "name": "swagger-vue-codegen",
   "version": "0.9.12",
   "main": "./dist/index",
   "typings": "./dist/",
-  "author": "Manwei Leung <mic.liangwenwei@foxmail.com>",
+  "author": "JerryTang",
   "license": "MIT",
   "repository": {
-    "url": "https://github.com/Manweill/swagger-axios-codegen.git",
+    "url": "https://github.com/jerrytang67/swagger-axios-codegen",
     "type": "git"
   },
   "keywords": [
